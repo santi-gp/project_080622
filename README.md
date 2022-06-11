@@ -28,4 +28,41 @@ Example if NameModel is Post we have:
  <li>2022_06_08_193555_create_posts_table.php in folder app/database/migrations</li>
 </ol>
 
+## Create Migrations
+```bash
+php artisan migrate
+```
+
+## Create Seeders
+Example, the seeder name is PostSeeder
+```bash
+php artisan make:seeder PostSeeder
+```
+
+## Insert registers with seeders
+Example, the seeder name is PostSeeder
+```bash
+php artisan db:seed --class=PostSeeder
+```
+
+## Create Factory
+Example, the seeder name is PostFactory
+```bash
+php artisan make:factory PostFactory
+```
+
+## Insert registers faker with seeders
+In file PostSeeder copy 
+\App\Models\Post::factory(10)->create(); 
+inside of the function run.
+
+where Post is the Model and 10 is the register numbers.
+
+Eject again
+
+```bash
+php artisan db:seed --class=PostSeeder
+```
+
+
 
